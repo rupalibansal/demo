@@ -1,0 +1,6 @@
+{
+    "baseURL" : "https://api.ratemyagent.com.au",
+    "trelloBaseUrl" : "https://api.trello.com",
+    "trelloKey":"f74c41230893368a2d9c79ad468ceea1",
+    "trelloToken":"ce5e2fc44f32e96a15d62b3b0d02f59be48a71d96895258bef1ca175cfcc0a40"
+}
