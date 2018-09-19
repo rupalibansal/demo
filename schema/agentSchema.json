@@ -1,0 +1,245 @@
+{
+  "definitions": {
+    "LocationAgentAgencyViewModel": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AgencyProfileUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AvatarImage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "Name",
+        "AgencyProfileUrl",
+        "AvatarImage"
+      ]
+    },
+    "LocationAgentViewModel": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "AgentProfileId": {
+          "type": "integer"
+        },
+        "AgentCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AgentProfileUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsAwardWinner": {
+          "type": "boolean"
+        },
+        "Agency": {
+          "$ref": "#/definitions/LocationAgentAgencyViewModel"
+        },
+        "Theme": {
+          "$ref": "#/definitions/ProfileThemeViewModel"
+        },
+        "TotalReviews": {
+          "type": "integer"
+        },
+        "OverallStars": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Ranking": {
+          "$ref": "#/definitions/LocationRankingSummaryViewModel"
+        }
+      },
+      "required": [
+        "AgentProfileId",
+        "AgentCode",
+        "Name",
+        "AgentProfileUrl",
+        "IsAwardWinner",
+        "Agency",
+        "Theme",
+        "TotalReviews",
+        "OverallStars",
+        "Ranking"
+      ]
+    },
+    "LocationRankingSummaryViewModel": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "RankPosition": {
+          "type": "integer"
+        },
+        "PrimaryRankingStatisticType": {
+          "type": "string",
+          "enum": [
+            "ActiveListings",
+            "SoldListings",
+            "AverageSalePrice",
+            "TotalSalePrice",
+            "TotalRecommendations",
+            "AverageStarRating",
+            "ReviewCoverage",
+            "TotalReviewCount",
+            "TotalVendorRecommendations",
+            "VendorReviewCoverage",
+            "VendorAverageStarRating",
+            "TotalBuyerRecommendations",
+            "BuyerReviewCoverage",
+            "BuyerAverageStarRating"
+          ]
+        },
+        "PrimaryRankingStatisticValue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SecondaryRankingStatisticType": {
+          "type": "string",
+          "enum": [
+            "ActiveListings",
+            "SoldListings",
+            "AverageSalePrice",
+            "TotalSalePrice",
+            "TotalRecommendations",
+            "AverageStarRating",
+            "ReviewCoverage",
+            "TotalReviewCount",
+            "TotalVendorRecommendations",
+            "VendorReviewCoverage",
+            "VendorAverageStarRating",
+            "TotalBuyerRecommendations",
+            "BuyerReviewCoverage",
+            "BuyerAverageStarRating"
+          ]
+        },
+        "SecondaryRankingStatisticValue": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "RankPosition",
+        "PrimaryRankingStatisticType",
+        "PrimaryRankingStatisticValue",
+        "SecondaryRankingStatisticType",
+        "SecondaryRankingStatisticValue"
+      ]
+    },
+    "ProfileThemeViewModel": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ThemeType": {
+          "type": "string",
+          "enum": [
+            "Agent",
+            "Agency"
+          ]
+        },
+        "CoverImage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BannerImage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AvatarImage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BackgroundColour": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TextColour": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "ThemeType",
+        "CoverImage",
+        "BannerImage",
+        "AvatarImage",
+        "BackgroundColour",
+        "TextColour"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "Results": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/LocationAgentViewModel"
+      }
+    },
+    "Total": {
+      "type": "integer"
+    },
+    "Take": {
+      "type": "integer"
+    },
+    "Skip": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "Results",
+    "Total",
+    "Take",
+    "Skip"
+  ]
+}

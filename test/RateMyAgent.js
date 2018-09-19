@@ -7,7 +7,7 @@
 // 6. Delete the ShortList Agent.
 
 // As the BaseUrl is stored in the setup folder inside the init.json file.
-let init = require('../setup/init.json');
+/*let init = require('../setup/init.json');
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 chai.use(chaiHttp);
@@ -77,4 +77,4 @@ describe('Rate My Agent Test Cases', () => {
 
     });
 
-});
+});*/
